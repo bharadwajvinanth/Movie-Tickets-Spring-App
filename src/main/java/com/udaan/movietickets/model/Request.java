@@ -14,6 +14,12 @@ public class Request {
         this.row = row;
         this.seats = seats;
     }
+    public Request(@JsonProperty("screenName") String screenName,
+                   @JsonProperty("row") int row) {
+        this.screenName = screenName;
+        this.row = row;
+        this.seats = new int[0];
+    }
 
     public String getScreenName() {
         return screenName;
